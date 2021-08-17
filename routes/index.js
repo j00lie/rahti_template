@@ -13,5 +13,8 @@ router.get("/test", function (req, res, next) {
 router.get("/secret", function (req, res, next) {
   res.json({ secret: process.env.SECRET });
 });
+router.get("/production", function (req, res, next) {
+  res.json({ branch: "This is a production branch" });
+});
 
 module.exports = router;
